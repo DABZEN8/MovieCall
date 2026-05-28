@@ -23,7 +23,6 @@ function handleAdd(movie) {
 
   <p v-if="isLoading">Loading...</p>
   <p v-else-if="error">Error: {{ error }}</p>
-  <p v-else-if="results.length === 0">Ni får inte söka på Star wars, Fight club eller Titanic ffs</p>
 
   <MovieList v-else :movies="results" @add="handleAdd" />
 </template>
