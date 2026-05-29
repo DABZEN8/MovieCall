@@ -9,11 +9,6 @@ function handleSearch(query) {
   search(query)
 }
 
-// The 'add' button doesn't do anything yet — the store is added in branch 5.
-// For now we just log it so we know the event fires.
-function handleAdd(movie) {
-  console.log('Add movie:', movie)
-}
 </script>
 
 <template>
