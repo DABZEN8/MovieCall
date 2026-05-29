@@ -7,12 +7,17 @@ defineProps({
     type: Array,
     required: true,
   },
+
+  buttonText:{
+    type: String,
+    default: "ADD MOVIE"
+  }
 })
 
-const emit = defineEmits(['add'])
+const emit = defineEmits(['action'])
 
-function handleAdd(movie) {
-  emit('add', movie)
+function handleAction(movie) {
+  emit('action', movie)
 }
 </script>
 
@@ -22,7 +27,8 @@ function handleAdd(movie) {
       v-for="movie in movies"
       :key="movie.id"
       :movie="movie"
-      @add="handleAdd"/>
+      :buttonText="buttonText"
+      @action="handleAction"/>
   </div>
 </template>
 
