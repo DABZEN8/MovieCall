@@ -7,12 +7,17 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  //----------------------
+  buttonText: {
+    type: String,
+    default: "ADD TO LIST"
+  }
 })
 
-const emit = defineEmits(['add'])
+const emit = defineEmits(['action'])
 
-function handleAdd() {
-  emit('add', props.movie)
+function handleAction() {
+  emit('action', props.movie)
 }
 </script>
 
@@ -29,7 +34,7 @@ function handleAdd() {
     <h3 class="title">{{ movie.title }}</h3>
     <p class="year">{{ movie.release_date?.slice(0, 4) }}</p>
 
-    <button class="add-button" @click="handleAdd">+ Add to list</button>
+    <button class="add-button" @click="handleAction">{{ buttonText }}</button>
   </article>
 </template>
 
