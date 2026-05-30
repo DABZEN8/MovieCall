@@ -1,4 +1,12 @@
 import { defineStore } from "pinia"
+import { useLocalStorage } from "@/composables/useLocalStorage" 
+
+const {
+    save,
+    load
+}
+=
+useLocalStorage()
 
 export const useMoviesStore =
 
@@ -9,13 +17,12 @@ defineStore("movies", {
 
         // Hämtar filmer som sparades tidigare från localStorage
         const savedMovies =
-        localStorage.getItem("savedMovies")
+        load("savedMovies")
 
         if (savedMovies) {
 
             return {
-                savedMovies:
-                JSON.parse(savedMovies)
+                savedMovies
             }
         }
 
@@ -36,11 +43,10 @@ defineStore("movies", {
             if (!exist) {
                 this.savedMovies.push(movie)
 
-                localStorage.setItem(
+                save(
                     "savedMovies",
-                    JSON.stringify(
-                        this.savedMovies
-                    )
+
+                    this.savedMovies
                 )
             }
         },
@@ -50,11 +56,10 @@ defineStore("movies", {
             this.savedMovies.filter(
                 movie => movie.id !== id
             )
-            localStorage.setItem(
+            save(
                 "savedMovies",
-                JSON.stringify(
-                    this.savedMovies
-                )
+                this.savedMovies
+
             )
         }
     }
