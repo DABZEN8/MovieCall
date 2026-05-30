@@ -83,5 +83,10 @@ function handleAction() {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.add-button:hover {
+  background: #071f3e;
 }
 </style>
