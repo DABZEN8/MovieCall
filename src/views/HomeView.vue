@@ -18,6 +18,10 @@ console.log(
 moviesStore.savedMovies
 )
 
+alert(
+  movie.title + " added to the list!"
+)
+
 }
 
 
