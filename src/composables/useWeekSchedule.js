@@ -31,7 +31,7 @@ export function useWeekSchedule() {
         errorMessage.value = ""
 
         if (movies.length <7) {
-            error.message.value =
+            errorMessage.value =
             "You need at least 7 movies in your list."
 
             return

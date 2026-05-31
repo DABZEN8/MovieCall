@@ -12,7 +12,11 @@ function handleRemove(movie){
 
 <template>
     <h2>My list</h2>
-    <p>Saved movies will appear here</p>
+
+    <p v-if="moviesStore.savedMovies.length === 0">
+        Saved movies will appear here
+    </p>
+    
     <MovieList :movies="moviesStore.savedMovies" buttonText="Remove" @action="handleRemove"/>
     
 </template>
