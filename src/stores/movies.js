@@ -48,6 +48,10 @@ defineStore("movies", {
 
                     this.savedMovies
                 )
+
+                alert(
+                    movie.title + " added to your list!"
+                )
             }
         },
         // ta bort filmen frn listan och uppdaterar också localstorage

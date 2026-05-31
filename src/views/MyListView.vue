@@ -7,6 +7,9 @@ const moviesStore = useMoviesStore()
 
 function handleRemove(movie){
     moviesStore.removeMovie(movie.id)
+    alert(
+        movie.title + " removed from list!"
+    )
 }
 </script>
 
