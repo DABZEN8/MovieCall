@@ -1,4 +1,12 @@
 import { ref } from "vue"
+import { useLocalStorage } from "./useLocalStorage"
+
+const {
+    save,
+    load
+}
+=
+useLocalStorage()
 
 // handles the film schedule of the week
 export function useWeekSchedule() {
@@ -14,8 +22,13 @@ export function useWeekSchedule() {
         "Sunday"
     ]
 
+    const savedWeekSchedule =
+    load("weekSchedule")
+
     const weekSchedule =
     ref(
+        savedWeekSchedule ||
+
         days.map(day => ({
             day,
             movie: null
@@ -50,6 +63,11 @@ export function useWeekSchedule() {
             day,
             movie: selectedMovies[index]
         }))
+
+        save(
+            "weekSchedule",
+            weekSchedule.value
+        )
     }
 
     return {
