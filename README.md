@@ -1,38 +1,69 @@
 # MovieCall
+MovieCall är en vue-baserad webbapplikation för filmintresserade användare. Spara och slumpa fram filmer att se under veckan.
 
-This template should help get you started developing with Vue 3 in Vite.
+Användare av MovieCall kan:
+-	Söka filmer
+-	Spara filmer i en personlig lista
+-	Ta bort filmer från listan
+-	Spara sin lista med hjälp av localStorage
+-	Skapa ett veckoschema med 7 slumpade filmer som rekommenderas från måndag till söndag.
+-	Spara denna listan av veckans filmer
+-	Använda MovieCall på olika skärmstorlekar med hjälp av den responsiva deisgnen
 
-## Recommended IDE Setup
+## Tekniker
+Projektet är byggt med följande:
+-	Vue 
+-	Vite
+-	Pinia
+-	TMDB API
+-	LocalStorage
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+## Kom igång med MovieCall
+Installation:
+sh
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+Kör igång servern:
 npm run dev
-```
 
-### Compile and Minify for Production
+Öppna den lokala länken som visas i terminalen som vanligtvist ser ut som följande:
+http://localhost:5173/
 
-```sh
-npm run build
-```
+## API 
+Projektet använder TMDB (The Movie Database). API’t används i MovieCall för att:
+-	Söka efter filmer
+-	Hämta filmffischer
+-	Visa filminformation som titel och utgivningsår
+
+## Val av ramverk
+Som grupp valde vi Vue 3 för detta projekt. Vue jämfördes med Angular och React innan beslutet togs.
+
+## Vue
+-	Enkel att komma igång med
+-	Komponentstrukturen är tydlig
+-	Passade för gruppens erfarenhetsnivå
+
+## React
+-	Ett större ekosystem 
+-	Krävde mer kod för vissa lösningar 
+-	Vanligt på arbetsmarknaden
+
+## Angular
+-	Ett kraftfullt ramverk
+-	Stort utbud av unbyggda funktioner
+-	Högre komplexitet för ett mindre projekt som MovieCall
+
+Som grupp fick vi prioritera erfarenhetsnivån och projektets storlek och ansåg att Vue passade vårt case.
+
+## Referenser
+Vue.js: 
+https://vuejs.org/guide/introduction
+
+React:
+https://react.dev/learn
+
+Angular:
+https://angular.dev/overview
+
+TMDB:
+https://developer.themoviedb.org/docs/getting-started
