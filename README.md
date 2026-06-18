@@ -64,14 +64,20 @@ Som grupp valde vi Vue 3 för detta projekt. Vue jämfördes med Angular och Rea
 Som grupp fick vi prioritera erfarenhetsnivån och projektets storlek och ansåg att Vue passade vårt case.
 
 ## Referenser
+https://2024.stateofjs.com/en-US/libraries/front-end-frameworks/
+https://v2.vuejs.org/v2/guide/comparison.html?redirect=true
+
 Vue.js: 
 https://vuejs.org/guide/introduction
+https://vueschool.io/articles/vuejs-tutorials/why-vue-js-is-a-great-starting-point-for-new-coders/
 
 React:
 https://react.dev/learn
+https://www.techmagic.co/blog/why-we-use-react-js-in-the-development
 
 Angular:
 https://angular.dev/overview
+https://strapi.io/blog/react-vs-angular-framework-comparison
 
 TMDB:
 https://developer.themoviedb.org/docs/getting-started
