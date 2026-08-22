@@ -1,5 +1,5 @@
 <script setup>
-import SearchBar from '@/components/SearchBar.vue'
+import SearchBar from '@/components/searchbar.vue'
 import MovieList from '@/components/MovieList.vue'
 import { useMovieSearch } from '@/composables/useMovieSearch'
 import { useMoviesStore } from "@/stores/movies"
